@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #f3f3f3;
+    text-align: center;
+    display: flex;
+}
+
+main {
+    max-width: 420px;
+    margin: auto;
+    padding: 1em;
+}
+
+section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+label[for="inputNumero"] {
+    font-size: 1.5em;
+}
+
+#inputNumero {
+    width: 100px;
+}
+
+.input {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.botao {
+    width: 90%;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: rebeccapurple;
+    margin: 10px 0;
+}
+
+p {
+    color: rebeccapurple;
+    padding: 1em;
+    font-weight: 500;
+}
+
+.bloqueado {
+    background-color: #ccc;
+}
+
+/* Paragrafo com ID aviso */
+#aviso {
+    /* padding: 10px; */
+    /* width: 100%; */
+    max-width: 420px;
+
+    /* margin: 0 auto; */
+}
+
+.atencao {
+    background: rgba(233, 31, 44, 0.897);
+    color: white;
+    border-radius: 10px;
+
+}
+
+.instrucoes {
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.moedas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+.moedas div{
+    margin: 0 10px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.radio-label{
+    display: flex;
+    cursor: pointer;
+}
+.radio-label::before {
+    content: '';
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    box-sizing: border-box;
+    border: 2px solid rebeccapurple;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    margin-right: 5px;
+}
+input[type=radio]:checked+label::before {
+    background-color: rgb(159, 88, 231);
+}

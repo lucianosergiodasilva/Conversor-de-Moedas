@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <main>
+        <h1>Conversor de Moedas</h1>
+        <br>
+
+        <!-- Informe um número -->
+
+        <section>
+            <label for="inputNumero">R$ </label>
+            <input type="number" name="inputNumero" id="inputNumero" class="input" min="0.01" step="0.01"
+                onblur="validarNumeroDigitado(this.value)" onkeyup="ativarBtnConverter();validarNumeroDigitado(this.value)"
+                onchange="ativarBtnConverter()" required autofocus tabindex="1">
+        </section>
+
+        <!-- Marque uma moeda -->
+
+        <section class="moedas">
+            <div>
+                <input type="radio" name="moeda" value="Dólar" id="dolar" tabindex="2">
+                <label for="dolar" class="radio-label">Dólar</label>
+            </div>
+            <div>
+                <input type="radio" name="moeda" value="Euro" id="euro" tabindex="3">
+                <label for="euro" class="radio-label">Euro</label>
+            </div>
+            <div>
+                <input type="radio" name="moeda" value="Libra" id="libra" tabindex="4">
+                <label for="libra" class="radio-label">Libra</label>
+            </div>
+            <div>
+                <input type="radio" name="moeda" value="Bitcoin" id="bitcoin" tabindex="5">
+                <label for="bitcoins" class="radio-label">Bitcoins</label>
+            </div>
+        </section>
+
+        <!-- Clique em converter -->
+
+        <section>
+            <button id="btnConverter" class="botao bloqueado" tabindex="6">Converter</button>
+            <button type="reset" id="btnLimpar" class="botao bloqueado" tabindex="7" onclick="limpar()">Limpar</button>
+        </section>
+
+        <!-- Mensagem de validação -->
+
+        <section class="instrucoes">
+            <p id="aviso">Digite o valor, escolha a moeda e clique em converter</p>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
